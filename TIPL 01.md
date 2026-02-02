@@ -20,7 +20,7 @@ Governed by Token: \[Insert token blockchain\] \[Insert Token Ticker\] \[Insert 
 This License acts as a governance wrapper over the specific usage rights granted for The IP.
 
 2.1 Initial Terms  
-Your rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of The IP are strictly governed by the Initial Terms file included in this distribution. The Initial Terms may define different permissions for different files, directories, or modules within The IP (e.g., specific files may be permissive open source, while others are restricted under commercial terms).
+Your rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of The IP are governed by the Initial Terms. The Initial Terms may define different permissions for different files, directories, or modules within The IP (e.g., specific files may be permissive open source, while others are restricted under commercial terms). The default Initial Terms for this repository are described in the file INITIALTERMS.md
 
 2.2 Conflict of Terms  
 In the event of a conflict between the Initial Terms and this TIPL regarding the usage of the IP, the Initial Terms shall control. In the event of a conflict regarding ownership, governance, or the Tender Offer mechanism, this TIPL shall control.

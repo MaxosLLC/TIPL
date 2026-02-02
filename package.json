@@ -1,0 +1,44 @@
+{
+  "name": "tipl",
+  "version": "1.0.0",
+  "description": "A Tokenized IP License delivers IP value without relying on any company or foundation. An acquirer can buy the IP by buying the tokens. A TIPL can govern any type of software or IP, not just crypto-related software.",
+  "main": "dist/signer/index.js",
+  "types": "dist/signer/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "generate-wallet": "ts-node scripts/generate-wallet.ts",
+    "get-address": "ts-node scripts/get-address.ts",
+    "send-eth": "ts-node scripts/send-eth.ts",
+    "check-wallet": "ts-node scripts/check-wallet.ts",
+    "create-safe": "ts-node scripts/create-safe.ts",
+    "deploy-token": "ts-node scripts/deploy-token.ts",
+    "create-uniswap-pool": "ts-node scripts/create-uniswap-pool.ts",
+    "mint-pool-position": "ts-node scripts/mint-pool-position.ts",
+    "view-treasury": "ts-node scripts/view-treasury.ts",
+    "get-token-info": "ts-node scripts/get-token-info.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxosLLC/TIPL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxosLLC/TIPL/issues"
+  },
+  "homepage": "https://github.com/MaxosLLC/TIPL#readme",
+  "dependencies": {
+    "@ledgerhq/hw-app-eth": "^7.3.2",
+    "@ledgerhq/hw-transport-node-hid": "^6.30.0",
+    "@safe-global/protocol-kit": "^6.1.2",
+    "ethers": "^6.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "dotenv": "^17.2.3",
+    "solc": "^0.8.24",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
