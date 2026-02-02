@@ -179,7 +179,7 @@ async function main() {
     // Verify balances
     const tiplBalance = await token.balanceOf(tiplTreasury);
     const projectBalance = await token.balanceOf(treasury);
-    const deployerBalance = await token.balanceOf(deployerAddress);
+    const finalDeployerBalance = await token.balanceOf(deployerAddress);
 
     // Disconnect Ledger if used
     if (signer instanceof LedgerSigner) {
@@ -203,7 +203,7 @@ async function main() {
         ...(pool && {
           deployer: {
             address: deployerAddress,
-            amount: ethers.formatUnits(deployerBalance, 18),
+            amount: ethers.formatUnits(finalDeployerBalance, 18),
             note: 'Reserved for Uniswap pool creation',
           },
         }),
