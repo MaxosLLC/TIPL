@@ -21,7 +21,7 @@ contract TIPLToken {
     constructor(string memory _name, string memory _symbol) {
         name = _name;
         symbol = _symbol;
-        totalSupply = 10_000_000 * 10 ** 18;
+        totalSupply = 1_000_000 * 10 ** 18;
         balanceOf[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
     }

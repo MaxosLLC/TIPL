@@ -4,14 +4,14 @@
  * Arguments: --token 0x... --treasury 0x...
  *
  * This script:
- * 1. Approves PositionManager for 2M tokens via Permit2
- * 2. Creates LP position with price range 0.001 to 1.0 USDC per token
+ * 1. Approves PositionManager for 200K tokens via Permit2
+ * 2. Creates LP position with price range 0.01 to 10 USDC per token
  * 3. Mints LP position using V4's modifyLiquidities
  * 4. LP NFT is sent to treasury
  *
  * Prerequisites:
  * - Pool must already exist (run create-uniswap-pool first)
- * - Deployer must have 2M tokens
+ * - Deployer must have 200K tokens
  *
  * Run: npm run mint-pool-position -- --token 0x... --treasury 0x...
  * Output: { positionId: "...", poolId: "0x...", ... }
@@ -29,11 +29,11 @@ const TICK_SPACING = 200; // Standard tick spacing for 1% fee tier
 const HOOKS = '0x0000000000000000000000000000000000000000'; // No hooks
 
 // Amount to provide as liquidity
-const LIQUIDITY_AMOUNT = ethers.parseUnits('2000000', 18); // 2M tokens
+const LIQUIDITY_AMOUNT = ethers.parseUnits('200000', 18); // 200K tokens
 
 // LP position price range (USDC per token)
-const PRICE_LOWER = 0.001;  // Lower bound: 0.001 USDC per token
-const PRICE_UPPER = 1.0;    // Upper bound: 1.0 USDC per token
+const PRICE_LOWER = 0.01;   // Lower bound: 0.01 USDC per token
+const PRICE_UPPER = 10.0;   // Upper bound: 10 USDC per token
 
 // Uniswap V4 Actions (from v4-periphery/src/libraries/Actions.sol)
 const Actions = {

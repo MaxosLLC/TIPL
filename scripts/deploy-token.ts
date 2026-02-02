@@ -4,9 +4,9 @@
  * Arguments: --name "Token Name" --symbol TKN --treasury 0x...
  *
  * Distribution:
- * - 500,000 tokens to TIPL_TREASURY (from env var)
- * - 9,500,000 tokens to project treasury (or 7,500,000 if pool will be created)
- * - 2,000,000 tokens reserved for Uniswap pool (if --pool flag is set)
+ * - 50,000 tokens to TIPL_TREASURY (from env var)
+ * - 950,000 tokens to project treasury (or 750,000 if pool will be created)
+ * - 200,000 tokens reserved for Uniswap pool (if --pool flag is set)
  *
  * Run: npm run deploy-token -- --name "My Token" --symbol MTK --treasury 0x...
  * Output: { tokenAddress: "0x...", distributions: {...} }
@@ -79,7 +79,7 @@ async function main() {
   console.log(`Token: ${name} (${symbol})`);
   console.log(`Project Treasury: ${treasury}`);
   console.log(`TIPL Treasury: ${tiplTreasury}`);
-  console.log(`Pool: ${pool ? 'Yes (2M tokens reserved)' : 'No'}`);
+  console.log(`Pool: ${pool ? 'Yes (200K tokens reserved)' : 'No'}`);
 
   if (signerType === 'ledger') {
     console.log('Please connect your Ledger, unlock it, and open the Ethereum app.');
@@ -122,8 +122,8 @@ async function main() {
     const token = new ethers.Contract(tokenAddress, ERC20_ABI, provider);
 
     // Distribution amounts (18 decimals)
-    const tiplAmount = ethers.parseUnits('500000', 18); // 500K to TIPL
-    const poolAmount = pool ? ethers.parseUnits('2000000', 18) : BigInt(0); // 2M for pool
+    const tiplAmount = ethers.parseUnits('50000', 18); // 50K to TIPL
+    const poolAmount = pool ? ethers.parseUnits('200000', 18) : BigInt(0); // 200K for pool
     const projectAmount = TOTAL_SUPPLY - tiplAmount - poolAmount; // Rest to project treasury
 
     console.log('\nDistributing tokens...');

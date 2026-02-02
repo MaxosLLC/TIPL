@@ -60,8 +60,8 @@ IMPORTANT: Do NOT suggest default names or symbols. The user must enter their ow
 ### Step 4: Ask About Uniswap Pool
 
 Use AskUserQuestion to ask if the user wants to create a Uniswap trading pool:
-- **Yes**: Reserve 2M tokens for the pool, project treasury gets 7.5M tokens
-- **No**: Project treasury gets 9.5M tokens (500K always goes to TIPL treasury)
+- **Yes**: Reserve 200K tokens for the pool, project treasury gets 750K tokens
+- **No**: Project treasury gets 950K tokens (50K always goes to TIPL treasury)
 
 ### Step 5: Deploy Token
 
@@ -138,10 +138,10 @@ After completing all steps, provide the user with a summary including:
 
 | Recipient | Without Pool | With Pool |
 |-----------|-------------|-----------|
-| TIPL Treasury | 500,000 (5%) | 500,000 (5%) |
-| Project Treasury | 9,500,000 (95%) | 7,500,000 (75%) |
-| Uniswap Pool | - | 2,000,000 (20%) |
-| **Total** | 10,000,000 | 10,000,000 |
+| TIPL Treasury | 50,000 (5%) | 50,000 (5%) |
+| Project Treasury | 950,000 (95%) | 750,000 (75%) |
+| Uniswap Pool | - | 200,000 (20%) |
+| **Total** | 1,000,000 | 1,000,000 |
 
 ## Error Handling
 

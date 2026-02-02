@@ -1,7 +1,7 @@
 /**
  * Create/initialize Uniswap V4 pool for token/USDC pair
  *
- * Arguments: --token 0x... [--price 0.001]
+ * Arguments: --token 0x... [--price 0.01]
  *
  * This script:
  * 1. Calculates the pool ID for token/USDC pair
@@ -34,7 +34,7 @@ const STATE_VIEW_ABI = [
 ];
 
 // Default starting price in USDC per token
-const DEFAULT_PRICE = 0.001;
+const DEFAULT_PRICE = 0.01;
 
 // Parse command line arguments
 function parseArgs(): { token: string; price: number } {
@@ -55,7 +55,7 @@ function parseArgs(): { token: string; price: number } {
   }
 
   if (!token) {
-    console.error('Usage: npm run create-uniswap-pool -- --token 0x... [--price 0.001]');
+    console.error('Usage: npm run create-uniswap-pool -- --token 0x... [--price 0.01]');
     process.exit(1);
   }
 

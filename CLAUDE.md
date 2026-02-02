@@ -81,14 +81,14 @@ The `/create-token` skill automates ERC20 token creation on Base mainnet:
 
 1. Verifies wallet balance (≥0.001 ETH required)
 2. Creates a Safe.global multisig treasury
-3. Deploys an ERC20 token (10M supply, 18 decimals)
+3. Deploys an ERC20 token (1M supply, 18 decimals)
 4. Distributes tokens: 5% to TIPL treasury, 95% to project treasury
 5. Optionally creates a Uniswap V4 trading pool
 
 Token distribution with pool:
-- 500K (5%) to TIPL treasury
-- 7.5M (75%) to project treasury
-- 2M (20%) to Uniswap pool
+- 50K (5%) to TIPL treasury
+- 750K (75%) to project treasury
+- 200K (20%) to Uniswap pool
 
 ## Signing Configuration
 
